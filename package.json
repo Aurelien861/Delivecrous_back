@@ -1,0 +1,31 @@
+{
+  "name": "delivecrous-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aurelien861/Delivecrous-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aurelien861/Delivecrous-api/issues"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
+  },
+  "homepage": "https://github.com/Aurelien861/Delivecrous-api#readme",
+  "description": "This api provides the endpoints used by the application Delivecrous.",
+  "main": "app.js",
+  "keywords": [],
+  "devDependencies": {
+    "@types/express": "^4.17.16"
+  }
+}

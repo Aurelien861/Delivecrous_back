@@ -1,2 +1,2 @@
-# Delivecrous_back
-api used by DeliveCrous app
+# Delivecrous-api
+This api provides the endpoints used by the application Delivecrous.
