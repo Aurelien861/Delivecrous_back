@@ -1,0 +1,638 @@
+{
+	"info": {
+		"_postman_id": "56f8cf61-71ac-4f14-adb1-1417fc60fb41",
+		"name": "delivecrous",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23011464"
+	},
+	"item": [
+		{
+			"name": "dish",
+			"item": [
+				{
+					"name": "add a dish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "baseURL",
+								"value": "http://localhost:3010",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pâtes carbonara\",\n    \"description\": \"Pâtes crème et lardon\",\n    \"allergens\": [\"cream\", \"other\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/dishes",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get dishes list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/dishes",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get dish by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/dishes/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6f61ab122df937a491c15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get dish thanks to text",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/dishes/:id/:text",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes",
+								":id",
+								":text"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6f61ab122df937a491c15"
+								},
+								{
+									"key": "text",
+									"value": "fromage"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a dish",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/dishes/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6f5f8b122df937a491c0f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify a dish",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pizza\",\n    \"description\": \"Pizza 3 fromages\",\n    \"allergens\": [\"cheese\", \"other\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/dishes/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dishes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6f61ab122df937a491c15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add a cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "baseURL",
+								"value": "http://localhost:3010",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishId\": \"63d70a9397530f9c8d384830\",\n    \"price\": 5,\n    \"image\": \"image.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/carts",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/carts",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/carts/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"carts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6fdf1959401c0a31860ac"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/carts/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"carts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6fdb4959401c0a31860a3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify a cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishId\": \"63d6f61ab122df937a491c15\",\n    \"price\": 8,\n    \"image\": \"image.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/carts/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"carts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6fdf1959401c0a31860ac"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "add a user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "baseURL",
+								"value": "http://localhost:3010",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"email\": \"user2@mail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6d0c374129896a2a40e76"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d7091d794619f5b010aa50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify a user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pizza\",\n    \"description\": \"Pizza 3 fromages\",\n    \"price\": 12,\n    \"image\": \"imagePizza2.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6e8a6020bf28dce8cde04"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add an order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "baseURL",
+								"value": "http://localhost:3010",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cartsId\": [\"63d6fdf1959401c0a31860acazdfez\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6d0c374129896a2a40e76"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6e8ad020bf28dce8cde06"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify a order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cartsId\": [\"63d6fdf1959401c0a31860ac\", \"63d70ab497530f9c8d384836\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/orders/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d70acc97530f9c8d384839"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate an order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adress\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/orders/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63d6e8a6020bf28dce8cde04"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3010"
+		}
+	]
+}
