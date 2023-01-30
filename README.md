@@ -1,2 +1,2 @@
-# Delivecrous_back
+# Delivecrous-api
 api used by DeliveCrous app
